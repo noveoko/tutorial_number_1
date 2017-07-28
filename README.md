@@ -36,8 +36,7 @@ The first line converts the request object into a bytes object. The bytes object
 paragraphs
 
 ```paragraphs = soup.find_all('p')
-all_words = ''
-```
+all_words = ''```
 
 This will take all of the paragraphs and return them to us as a BeautifulSoup return object. The next line will create an empty string, which we will use to store all the words we extract from the paragraphs using the following:
 
@@ -47,23 +46,19 @@ This will take all of the paragraphs and return them to us as a BeautifulSoup re
 
 Next we split the giant string of words into a list of individual words:
 
-```all_words = all_words.split(' ')
-```
+`all_words = all_words.split(' ')`
 
 Now all we have to do is import our last library
 
-```from Collections import counter
-```
+`from Collections import counter`
 
 This library will allow us to quickly and easily take our list of words, and tally up the frequency of each word in the list as follows:
 
-```frequency = Counter(all_words)
-```
+`frequency = Counter(all_words)`
 
 In order to retrieve the 10 most common words we simply make a slight modification:
 
-```frequency = Counter(all_words).most_common(10)
-```
+`frequency = Counter(all_words).most_common(10)`
 
 If we print frequency we get
 
